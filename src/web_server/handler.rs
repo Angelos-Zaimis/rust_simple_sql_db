@@ -7,6 +7,9 @@ use serde::Deserialize;
 pub struct CreateTableRequest {
     table_name: String,
 }
+pub async fn health_handler() -> impl Reply {
+    warp::reply::json(&"OK")
+}
 
 //Find Table Handler
 pub async fn find_table_handler(table_name: String, db: SharedDatabase) -> Result<impl Reply, Rejection> {
