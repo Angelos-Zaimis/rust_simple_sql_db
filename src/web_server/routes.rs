@@ -2,7 +2,7 @@ use warp::Filter;
 use crate::database::{SharedDatabase};
 use super::handler;
 
-pub async fn start_server(db: SharedDatabase) {
+pub async fn run(db: SharedDatabase) {
 
     let find_table_route = warp::post()
         .and(warp::path("find"))
@@ -59,6 +59,7 @@ pub async fn start_server(db: SharedDatabase) {
 
     // Start the server
     warp::serve(routes).run(([127, 0, 0, 1], 3030)).await;
+    print!("sdf")
 }
 
 // Middleware for passing database reference

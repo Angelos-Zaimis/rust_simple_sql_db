@@ -104,6 +104,14 @@ def test_database():
     print("\n🔍 Retrieving Users After Deletion:")
     print("📋 Select Response:", select_all(table_name))
 
+    print("\n📝 Inserting Rows...")
+    row1 = {"id": 1, "name": "bil", "age": 25}
+    row2 = {"id": 2, "name": "george", "age": 30}
+
+    print("➕ Insert Response 1:", insert_row(table_name, row1))
+    print("➕ Insert Response 2:", insert_row(table_name, row2))
+
+
     print("\n✅ API Test Completed Successfully!\n")
 
 

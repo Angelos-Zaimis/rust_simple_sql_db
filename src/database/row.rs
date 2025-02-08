@@ -6,14 +6,3 @@ pub struct Row {
     pub name: String,
     pub age: u32,
 }
-
-impl Row {
-
-    pub fn new(id: u32, name: &str, age: u32) -> Self {
-        Row {
-            id,
-            name: name.to_string(),
-            age,
-        }
-    }
-}
